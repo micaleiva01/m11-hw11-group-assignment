@@ -67,7 +67,7 @@
   }
 
   .hero__background {
-    background-size: cover;
+    background-size: contain;
   }
 
   .hero__background__history {
@@ -78,6 +78,11 @@
   .hero__background__characters {
     background-image: url(https://github.com/bgbshear/m10-h10-shear-brittany/assets/156130313/b0b819d5-4a0a-44af-8c5f-7d3022d554e9);
     background-position: 50% 5%;
+  }
+
+  .hero__background__home {
+    background-image: url(https://github.com/bgbshear/m10-h10-shear-brittany/assets/156130313/ba138496-65ef-41db-9907-911dc2641ad8);
+    background-position: center;
   }
 
   .main__text {
