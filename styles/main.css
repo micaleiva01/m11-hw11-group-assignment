@@ -100,3 +100,41 @@ footer {
         padding-top: 10px;
     }
 }
+
+/* Characters Page */
+
+.img_card {
+    background-color: #fed202;
+    margin: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    border-radius: 10px;
+}
+.img_card__container {
+    display: grid;
+    grid-template-areas: "c1 c2" "c3 c4";
+    justify-content: space-evenly;
+    grid-template-columns: 400px 400px;
+}
+.img_card_1 {
+    grid-area: c1;
+}
+.img_card_2 {
+    grid-area: c2;
+}
+.img_card_3 {
+    grid-area: c3;
+}
+.img_card_4 {
+    grid-area: c4;
+}
+@media screen and (max-width: 840px){
+    .img_card__container {
+        grid-template-areas: "c1" "c2" "c3" "c4";
+        grid-template-columns: 400px;
+    }
+}
