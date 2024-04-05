@@ -1,66 +1,97 @@
 :root {
-    --black: hsl(#000);
-    --white: hsl(#ffffff);
-    --blue: hsl(#0175bd);
-    --red: hsl(#e7121f);
-    --yellow: hsl(#fed202);
+    --black: #000;
+    --white: #ffffff;
+    --blue: #0175bd;
+    --red: #e7121f;
+    --yellow: #fed202;
+    --gray: #A1A1A1;
   }
   
   body {
     font-family: 'Lato';
     font-size: 1.2rem;
     margin: 0;
-    display: grid;
-    grid-template-areas: 
-      "header      nav"
-      "content content"
-      "footer   footer";
-    grid-template-columns: 260px 4fr;
-    grid-template-rows: 150px 1fr 60px;
     min-height: 100vh;
     background-color: var(--white);
+    color: var(--black);
+    display: flex;
+    flex-direction: column;
+  }
+
+  main {
+    margin-top: 0;
+    padding: 0;
   }
   
   .header {
-    display: grid;
-    grid-area: header;
+    padding: 20px 0;
+    margin-bottom: 0;
+    box-shadow: 4px 4px 10px var(--gray);
+    border-bottom: 10px solid var(--blue);
+  }
+
+  .nav {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    max-width: 800px;
     align-items: center;
-    justify-items: left;
-    margin: 0;
-    padding-left: 10px;
+    gap: 8px;
+    width: 100%;
   }
   
-  .nav__container {
-    display: grid;
-    row-gap: 24px;
-    grid-template-rows: 1fr;
-    grid-area: nav;
-    /* min-width: 200px; */
-    justify-items: right;
-    /* padding: 12px 0 24px;
-    margin: 40px; */
+  .nav__logo {
+    margin-right: auto;
   }
-  
-  .nav__link, .nav__link--active {
+
+  .nav__link {
+    margin-left: 24px;
     text-decoration: none;
-    color: var(--primary);
-    position: relative;
+    color: var(--black);
+    text-transform: uppercase;
   }
-  .nav__link::after, .nav__link--active::after {
-    position: absolute;
-    content: "";
-    bottom: 0;
-    left: 50%;
-    margin-left: -90px;
-    border-bottom: var(--primary) 1px solid;
-    width: 180px;
+
+  .nav__link:hover {
+    color: var(--red);
   }
   
-  .nav__link--active {
-    box-shadow: inset var(--highlight) 200px 0px 0px 1px;
-    padding: 0 70px;
+  .hero {
+    margin-top: 0;
+    height: 300px;
+    text-align: center;
+    justify-items: center;
+    margin-bottom: 40px;
+    box-shadow: 4px 4px 10px var(--gray);
+    background-color: var(--white);
+    border-bottom: 10px solid var(--yellow);
   }
-  
+
+  .hero__background {
+    background-size: cover;
+  }
+
+  .hero__background__history {
+    background-image: url(https://github.com/bgbshear/m10-h10-shear-brittany/assets/156130313/4f55d774-da6e-482b-a921-fc87815fb89a);
+    background-position: center;
+  }
+
+  .hero__background__characters {
+    background-image: url(https://github.com/bgbshear/m10-h10-shear-brittany/assets/156130313/b0b819d5-4a0a-44af-8c5f-7d3022d554e9);
+    background-position: 50% 5%;
+  }
+
+  .main__text {
+    text-transform: uppercase;
+    color: var(--red);
+    font-size: 2rem;
+    font-weight: 700;
+    text-shadow: var(--white) 0px 0px 10px, var(--white) 0px 0px 20px, var(--gray) 2px 2px 2px;
+    padding: 0 48px;
+    margin: 0;
+    line-height: 1.75;
+    margin-bottom: 48px;
+  }
+
   .img_card__container {
     margin: 40px;
     display: grid;
@@ -88,16 +119,18 @@
   }
   
   .footer {
-    display: grid;
-    align-items: center;
-    justify-items: center;
-    grid-area: footer;
+    margin-top: 96px;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 24px 0;
   }
   
   @media screen and (max-width: 1100px) {
+
     .header__title {
       font-size: 2rem;
     }
+
     .nav__container {
       min-width: 300px;
       grid-template-columns: repeat(4, 1fr);
@@ -105,15 +138,19 @@
       height: 60px;
       align-items: center;
     }
+
     .nav__link, .nav__link--active {
       text-decoration: underline;
     }
+
     .nav__link--active {
       padding: 0;
     }
+
     .nav__link::after, .nav__link--active::after {
       display: none;
     }
+
     body {
       grid-template-areas: 
         "header"
@@ -123,6 +160,7 @@
       grid-template-columns: 1fr;
       grid-template-rows: 100px 60px 1fr 60px;
     }
+
     .img_card__container {
       margin: 80px 10px;
       column-gap: 0px;

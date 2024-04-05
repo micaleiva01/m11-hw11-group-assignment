@@ -10,51 +10,67 @@
   <link rel="stylesheet" href="styles/main.css">
   <title>Characters</title>
 </head>
+
 <body>
+
   <header class="header">
-    <img class="header__image" src="photos/Seinfeld_logo.svg.png" width="256" height="110.5">
-  </header>
-  <nav class="nav">
-    <div class="nav__container">
-      <a class="nav__link" href="#">Home</a>
-      <a class="nav__link" href="#">History</a>
-      <a class="nav__link" href="characters.html">Characters</a>
-      <a class="nav__link" href="#">Episodes</a>
-    </div>
-  </nav>
-  <main class="img_card__container">
-    <div class="img_card">
-      <img class="img_card__img" src="photos/Jerry.jpg" alt="Jerry Seinfeld">
-      <p class="img_card__text">
+
+    <nav class="nav">
+      <div class="nav__container">
+        <a class="nav__logo" href="index.html"><img src="photos/Seinfeld_logo.svg.png" width="256" height="110.5" alt="Seinfeld Logo"></a>
+        <a class="nav__link" href="#">Home</a>
+        <a class="nav__link" href="#">History</a>
+        <a class="nav__link" href="characters.html">Characters</a>
+        <a class="nav__link" href="#">Episodes</a>
+      </div>
+    </nav>
+
+</header>
+
+  <main>
+
+    <section class="hero hero__background hero__background__characters">
+      <p class="main__text">Characters</p>
+    </section>
+
+    <section class="img_card__container">
+      <div class="img_card">
+        <img class="img_card__img" src="photos/Jerry.jpg" alt="Jerry Seinfeld">
+        <p class="img_card__text">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo nihil enim ex voluptatibus assumenda consequatur?
-      </p>
-    </div>
-    <div class="img_card">
-      <img class="img_card__img" src="photos/Elaine.jpg" alt="Elaine Benes">
-      <p class="img_card__text">
+        </p>
+      </div>
+      <div class="img_card">
+        <img class="img_card__img" src="photos/Elaine.jpg" alt="Elaine Benes">
+        <p class="img_card__text">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo nihil enim ex voluptatibus assumenda consequatur?
-      </p>
-    </div>
-    <div class="img_card">
-      <img class="img_card__img" src="photos/Kramer.jpg" alt="Cosmo Kramer">
-      <p class="img_card__text">
+        </p>
+      </div>
+      <div class="img_card">
+        <img class="img_card__img" src="photos/Kramer.jpg" alt="Cosmo Kramer">
+        <p class="img_card__text">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo nihil enim ex voluptatibus assumenda consequatur?
-      </p>
-    </div>
-    <div class="img_card">
-      <img class="img_card__img" src="photos/George.jpg" alt="George Costanza">
-      <p class="img_card__text">
+        </p>
+      </div>
+      <div class="img_card">
+        <img class="img_card__img" src="photos/George.jpg" alt="George Costanza">
+        <p class="img_card__text">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo nihil enim ex voluptatibus assumenda consequatur?
-      </p>
-    </div>
+        </p>
+      </div>
+    </section>
+
   </main>
+
   <footer class="footer">
     <p class="footer__copyright_text">
       &copy; M11HW11 <span id="year"></span>
     </p>
   </footer>
+
   <script>
     document.getElementById('year').textContent = new Date().getFullYear()
   </script>
+
 </body>
 </html>
