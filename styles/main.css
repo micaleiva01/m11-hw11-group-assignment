@@ -1,0 +1,130 @@
+:root {
+    --black: hsl(#000);
+    --white: hsl(#ffffff);
+    --blue: hsl(#0175bd);
+    --red: hsl(#e7121f);
+    --yellow: hsl(#fed202);
+  }
+  
+  body {
+    font-family: 'Lato';
+    font-size: 1.2rem;
+    margin: 0;
+    display: grid;
+    grid-template-areas: 
+      "header      nav"
+      "content content"
+      "footer   footer";
+    grid-template-columns: 260px 4fr;
+    grid-template-rows: 150px 1fr 60px;
+    min-height: 100vh;
+    background-color: var(--white);
+  }
+  
+  .header {
+    display: grid;
+    grid-area: header;
+    align-items: center;
+    justify-items: left;
+    margin: 0;
+    padding-left: 10px;
+  }
+  
+  .nav__container {
+    display: grid;
+    row-gap: 24px;
+    grid-template-rows: 1fr;
+    grid-area: nav;
+    /* min-width: 200px; */
+    justify-items: right;
+    /* padding: 12px 0 24px;
+    margin: 40px; */
+  }
+  
+  .nav__link, .nav__link--active {
+    text-decoration: none;
+    color: var(--primary);
+    position: relative;
+  }
+  .nav__link::after, .nav__link--active::after {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 50%;
+    margin-left: -90px;
+    border-bottom: var(--primary) 1px solid;
+    width: 180px;
+  }
+  
+  .nav__link--active {
+    box-shadow: inset var(--highlight) 200px 0px 0px 1px;
+    padding: 0 70px;
+  }
+  
+  .img_card__container {
+    margin: 40px;
+    display: grid;
+    grid-area: content;
+    grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+    grid-auto-rows: 350px;
+    justify-items: center;
+    row-gap: 40px;
+    column-gap: 10px;
+  }
+  
+  .img_card {
+    width: 300px;
+    box-shadow: var(--gray) 4px 4px 10px 2px;
+    border-radius: 3px;
+  }
+  
+  .img_card__img {
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+  }
+  
+  .img_card__text {
+    padding: 0 12px;
+  }
+  
+  .footer {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-area: footer;
+  }
+  
+  @media screen and (max-width: 1100px) {
+    .header__title {
+      font-size: 2rem;
+    }
+    .nav__container {
+      min-width: 300px;
+      grid-template-columns: repeat(4, 1fr);
+      padding: 0;
+      height: 60px;
+      align-items: center;
+    }
+    .nav__link, .nav__link--active {
+      text-decoration: underline;
+    }
+    .nav__link--active {
+      padding: 0;
+    }
+    .nav__link::after, .nav__link--active::after {
+      display: none;
+    }
+    body {
+      grid-template-areas: 
+        "header"
+        "nav"
+        "content"
+        "footer";
+      grid-template-columns: 1fr;
+      grid-template-rows: 100px 60px 1fr 60px;
+    }
+    .img_card__container {
+      margin: 80px 10px;
+      column-gap: 0px;
+    }
+  }
