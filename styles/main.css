@@ -67,7 +67,7 @@
   }
 
   .hero__background {
-    background-size: c;
+    background-size: contain;
   }
 
   .hero__background__history {
