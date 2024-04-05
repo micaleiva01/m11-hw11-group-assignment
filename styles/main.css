@@ -15,12 +15,12 @@
   }
   
   .header {
-    display: grid;
     grid-area: header;
     align-items: center;
     justify-items: left;
     margin: 0;
     padding-left: 10px;
+    padding-top: 10px;
   }
   
   .nav__container {
@@ -53,7 +53,6 @@
   }
   
   .footer {
-    display: grid;
     align-items: center;
     justify-items: center;
     grid-area: footer;
@@ -81,7 +80,7 @@
     .nav__link::after, .nav__link--active::after {
       display: none;
     }
-    body {
+      .character_page body {
       grid-template-areas: 
         "header"
         "nav"
@@ -104,7 +103,6 @@
       grid-template-columns: 260px 4fr;
       grid-template-rows: 150px 1fr 60px;
     }
-
     .character_page .img_card__container {
       margin: 40px;
       display: grid;
@@ -114,7 +112,6 @@
       justify-items: center;
       row-gap: 240px;
       column-gap: 10px;
-      
     }
     
     .character_page .img_card {
