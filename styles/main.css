@@ -1,14 +1,166 @@
+:root {
+    --black: #000;
+    --white: #ffffff;
+    --blue: #0175bd;
+    --red: #e7121f;
+    --yellow: #fed202;
+    --gray: #A1A1A1;
+  }
+
 body {
+    font-family: 'Lato';
+    font-size: 1.2rem;
     margin: 0;
+    min-height: 100vh;
+    background-color: var(--white);
+    color: var(--black);
+    display: flex;
+    flex-direction: column;
 }
 
-.navbar {
+main {
+    margin-top: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.header {
+    padding: 20px 0;
+    margin-bottom: 0;
+    box-shadow: 4px 4px 10px var(--gray);
+    border-bottom: 10px solid var(--blue);
     display: flex;
-    position: fixed;
+  }
+
+.nav {
+    display: flex;
+    flex-direction: row;
     top: 0;
     width: 100%;
     height: 100px;
     background-color: white;
+}
+
+.nav__logo {
+    margin-right: auto;
+    margin-left: 40px;
+  }
+
+.nav__link {
+    margin-left: 24px;
+    text-decoration: none;
+    color: var(--black);
+    text-transform: uppercase;
+    padding-top: 30px;
+    float: right;
+}
+
+.nav__link:hover {
+    color: var(--red);
+    font-weight: bolder;
+    font-size: 1.25rem;
+}
+
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+  }
+  
+.hover-underline-animation::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--yellow);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+  
+.hover-underline-animation:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.hero {
+    margin-top: 0;
+    height: 300px;
+    text-align: center;
+    justify-items: center;
+    margin-bottom: 40px;
+    box-shadow: 4px 4px 10px var(--gray);
+    background-color: var(--white);
+    border-bottom: 10px solid var(--yellow);
+  }
+
+  .hero__background {
+    background-size: contain;
+  }
+
+  .hero__background__home {
+    background-image: url(https://github.com/bgbshear/m10-h10-shear-brittany/assets/156130313/ba138496-65ef-41db-9907-911dc2641ad8);
+    background-position: center;
+  }
+
+  .hero__background__history {
+    background-image: url(https://github.com/bgbshear/m10-h10-shear-brittany/assets/156130313/4f55d774-da6e-482b-a921-fc87815fb89a);
+    background-position: center;
+  }
+
+  .hero__background__characters {
+    background-image: url(https://github.com/bgbshear/m10-h10-shear-brittany/assets/156130313/b0b819d5-4a0a-44af-8c5f-7d3022d554e9);
+    background-position: 50% 5%;
+  }
+
+  .heading {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 0 48px;
+    margin: 0;
+    line-height: 1.75;
+    margin-bottom: 48px;
+    color: var(--red);
+    text-shadow: var(--white) 0px 0px 10px, var(--white) 0px 0px 20px, var(--gray) 2px 2px 2px;
+  }
+
+.container__history {
+    display: flex;
+    align-items: center;
+    max-width: 1000px;
+}
+
+.article {
+    align-content: center;
+    margin: 10px 45px;
+}
+
+.body-text {
+    align-content: center;
+    flex-wrap: wrap;
+    
+}
+
+.aside {
+  height: 200px;
+  width: fit-content;
+  background-color: var(--blue);
+  color: var(--white);
+}
+
+.aside__text {
+  font-style: italic;
+  font-size: 1rem;
+  align-content: center;
+}
+
+.navbaritem {
+    float: right;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .navbar ul {
@@ -16,20 +168,6 @@ body {
     list-style-type: none;
     margin-bottom: 0;
     padding-bottom: 0;
-}
-
-.navbar a {
-    color: red;
-    text-decoration: none;
-    padding-top: 30px;
-    padding-bottom: 30px;
-}
-
-.navbaritem {
-    float: right;
-    padding-left: 20px;
-    padding-right: 20px;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .navbar li {
@@ -52,40 +190,16 @@ body {
     margin: 0;
 }
 
-h1 {
-    text-align: center;
-    color: red;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
 .page {
     margin: 50px !important;
 }
 
-p {
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.lineabove {
-    background-color: rgb(56, 56, 236);
-    height: 10px;
-    margin-top: 100px;
-    margin-bottom: 4px;
-}
-
-.linebelow {
-    background-color: rgb(234, 228, 102);
-    height: 10px;
-    margin: 0;
-}
-
-footer {
-    margin-left: 30px;
-    margin-right: 30px;
-    font-size: 10px;
-    padding-bottom: 30px;
+.footer {
+    margin-top: 96px;
     text-align: center;
-}
+    text-transform: uppercase;
+    padding: 24px 0;
+  }
 
 @media screen and (max-width: 626px){
     .navbar {
