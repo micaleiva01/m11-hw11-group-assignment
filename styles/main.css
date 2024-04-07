@@ -30,6 +30,9 @@ main {
     box-shadow: 4px 4px 10px var(--gray);
     border-bottom: 10px solid var(--blue);
     display: flex;
+    position: sticky;
+    top: 0;
+    background-color: #fff;
   }
 
 /* Episodes Page */
