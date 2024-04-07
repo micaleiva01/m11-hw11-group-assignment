@@ -32,6 +32,77 @@ main {
     display: flex;
   }
 
+/* Episodes Page */
+.episode-image-banner {
+    width: 100%;
+  }
+  .episode-container {
+    margin-bottom: 60px;
+  }
+  .episode-main-div {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    align-items: center;
+    gap: 30px;
+    margin-top: 30px;
+  }
+  .episode-image-div {
+    grid-column: 1 / 2;
+  }
+  .episode-text-div {
+    grid-column: 2 / 3;
+  }
+  .episode-heading {
+    color: #0175bd;
+    font-size: 32px;
+    margin-bottom: 0px;
+    width: fit-content;
+  }
+  .episode-heading:hover {
+    color: #fed202;
+    cursor: pointer;
+  }
+  .episode-heading:hover .episode-num {
+    background-color: #0175bd;
+  }
+  .episode-num {
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.2em;
+    background: #d7282f;
+    display: inline-flex;
+    align-self: stretch;
+    justify-content: center;
+    padding: 5px 15px;
+  }
+  .episode-image {
+    width: 100%;
+  }
+  @media screen and (max-width: 768px) {
+    .episode-main-div {
+      grid-template-columns: 100%; /* Display both divs stacked on top of each other */
+    }
+  
+    .episode-image-div,
+    .episode-text-div {
+      grid-column: auto; /* Reset grid-column to default */
+      width: 100%; /* Make both divs take full width */
+    }
+    .episode-heading {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+  }
+  .first-letter::first-letter {
+    initial-letter: 3;
+    font-weight: 700;
+    padding: 20px;
+  }
+  .episode-container p {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  
 .nav {
     display: flex;
     flex-direction: column;
