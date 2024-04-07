@@ -103,26 +103,26 @@ main {
     border-bottom: 10px solid var(--yellow);
   }
 
-  .hero__background {
+.hero__background {
     background-size: contain;
-  }
+}
 
-  .hero__background__home {
+.hero__background__home {
     background-image: url(https://github.com/bgbshear/m10-h10-shear-brittany/assets/156130313/ba138496-65ef-41db-9907-911dc2641ad8);
     background-position: center;
-  }
+}
 
-  .hero__background__history {
+.hero__background__history {
     background-image: url(https://github.com/bgbshear/m10-h10-shear-brittany/assets/156130313/4f55d774-da6e-482b-a921-fc87815fb89a);
     background-position: center;
-  }
+}
 
-  .hero__background__characters {
+.hero__background__characters {
     background-image: url(https://github.com/bgbshear/m10-h10-shear-brittany/assets/156130313/b0b819d5-4a0a-44af-8c5f-7d3022d554e9);
     background-position: 50% 5%;
-  }
+}
 
-  .heading {
+.heading {
     text-align: center;
     text-transform: uppercase;
     font-size: 2rem;
@@ -130,24 +130,24 @@ main {
     padding: 0 48px;
     margin: 0;
     line-height: 1.75;
-    margin-bottom: 48px;
+    margin-bottom: 10px;
     color: var(--red);
     text-shadow: var(--white) 0px 0px 10px, var(--white) 0px 0px 20px, var(--gray) 2px 2px 2px;
-  }
+}
 
 .container__history {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    gap: 20px;
+    gap: 10px;
 }
 
 .history__col {
     display: flex;
     max-width: 1000px;
     align-items: center;
-    gap: 50px;
+    gap: 20px;
 }
 
 .article {
@@ -157,27 +157,55 @@ main {
 .body-text {
     align-content: center;
     flex-wrap: wrap;
-    
 }
 
 .aside {
-  height: 200px;
-  width: fit-content;
+  height: 175px;
+  width: 850px;
   background-color: var(--blue);
   color: var(--white);
-  padding: 12px;
-  border-radius: 20px;
-  box-shadow: #000;
+  padding: 0 12px;
+  border-radius: 10px;
+  box-shadow: 4px 4px 10px var(--gray);
 }
 
-.aside__left {
+.aside__secondary {
     order: -1;
+    background-color: var(--red);
+    justify-content: center;
+    align-content: center;
+    height: 150px;
+}
+
+.aside__tertiary {
+    background-color: var(--yellow);
+    color: var(--black);
+    height: 150px;
+    width: 375px;
+    align-content: center;
 }
 
 .aside__text {
   font-style: italic;
   font-size: 1rem;
   align-content: center;
+}
+
+.link {
+    color: var(--yellow);
+    text-decoration: none;
+}
+
+.link__alt {
+    color: var(--red);
+}
+
+.link__body {
+    color: var(--blue);
+}
+
+.link:hover {
+    text-decoration: underline;
 }
 
 .navbaritem {
@@ -269,6 +297,7 @@ main {
 .img_card_4 {
     grid-area: c4;
 }
+
 @media screen and (max-width: 840px){
     .img_card__container {
         grid-template-areas: "c1" "c2" "c3" "c4";
