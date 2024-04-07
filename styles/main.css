@@ -198,6 +198,11 @@ main {
     background-position: 50% 5%;
 }
 
+.hero__background__episodes {
+    background-image: url(https://github.com/micaleiva01/m11-hw11-group-assignment/assets/156130313/4d7faf6a-972f-4153-9f0a-b13ade1acc27);
+    background-position: center;
+}
+
 .heading {
     text-align: center;
     text-transform: uppercase;
